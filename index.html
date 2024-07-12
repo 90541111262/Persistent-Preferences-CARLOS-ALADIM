@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTM6302 Persistent Preferences</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section class="preferences">
+            <h2>Color</h2>
+            <label for="colorSelect">Choose a color:</label>
+            <select id="colorSelect">
+                <option value="#00cced">00cced - Blue</option>
+                <option value="#00ff00">00ff00 - Green</option>
+                <option value="#4f5cd6">4f5cd6 - Purple</option>
+                <option value="#ff8700">ff8700 - Yellow</option>
+            </select>
+            <h2>Font Style</h2>
+            <label for="fontSelect">Choose a font style:</label>
+            <select id="fontSelect">
+                <option value="serif">Times New Roman (Serif)</option>
+                <option value="sans-serif">Helvetica (Sans Serif)</option>
+            </select>
+        </section>
+        <section class="preferences">
+            <h2>Preferences</h2>
+            <div id="colorDisplay"></div>
+            <p id="colorName"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
