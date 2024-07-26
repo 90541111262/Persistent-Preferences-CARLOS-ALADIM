@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalImages = 20;
     for (let i = 1; i <= totalImages; i++) {
         const option = document.createElement('option');
-        option.value = `file:///C:/Users/supatel/Documents/Web_Development_III/mtm6302-persistent-preferences-suragskp/hd/${i}.jpg`;
+        option.value = `file:///hd/${i}.jpg`;
         option.textContent = `Image ${i}`;
         imageDropdown.appendChild(option);
     }
