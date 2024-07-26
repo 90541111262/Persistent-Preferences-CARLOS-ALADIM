@@ -22,13 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add images to the dropdown
-const totalImages = 20;
-for (let i = 1; i <= totalImages; i++) {
-    const option = document.createElement('option');
-    option.value = `https://raw.githubusercontent.com/90541111262/Persistent-Preferences-CARLOS-ALADIM/main/hd${i}.jpg`;
-    option.textContent = `Image ${i}`;
-    imageDropdown.appendChild(option);
-}
+    const totalImages = 20;
+    for (let i = 1; i <= totalImages; i++) {
+        const option = document.createElement('option');
+        const imageUrl = `https://raw.githubusercontent.com/90541111262/Persistent-Preferences-CARLOS-ALADIM/main/hd${i}.jpg`;
+        console.log('Adding image URL to dropdown:', imageUrl);
+        option.value = imageUrl;
+        option.textContent = `Image ${i}`;
+        imageDropdown.appendChild(option);
+    }
 
     // Load preferences from local storage
     const savedColor = localStorage.getItem('themeColor');
@@ -51,6 +53,7 @@ for (let i = 1; i <= totalImages; i++) {
     // Event listeners for preferences
     colorPicker.addEventListener('input', (e) => {
         const color = e.target.value;
+        console.log('Selected color:', color);
         document.body.style.backgroundColor = color;
         container.style.backgroundColor = adjustColorBrightness(color, 20);
         header.style.backgroundColor = adjustColorBrightness(color, 20);
@@ -62,6 +65,7 @@ for (let i = 1; i <= totalImages; i++) {
 
     imageDropdown.addEventListener('change', (e) => {
         const imageUrl = e.target.value;
+        console.log('Selected image URL:', imageUrl);
         document.body.style.backgroundImage = `url('${imageUrl}')`;
         localStorage.setItem('backgroundImage', imageUrl);
         localStorage.removeItem('themeColor'); // Clear color preference
