@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalImages = 20;
     for (let i = 1; i <= totalImages; i++) {
         const option = document.createElement('option');
-        option.value = `https://github.com/90541111262/Persistent-Preferences-CARLOS-ALADIM/edit/main/hd/${i}.jpg`;
+        option.value = `https://github.com/90541111262/Persistent-Preferences-CARLOS-ALADIM/tree/main/hd/${i}.jpg`;
         option.textContent = `Image ${i}`;
         imageDropdown.appendChild(option);
     }
