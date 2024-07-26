@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Add images to the dropdown
-    const totalImages = 20;
-    for (let i = 1; i <= totalImages; i++) {
-        const option = document.createElement('option');
-        option.value = `https://github.com/90541111262/Persistent-Preferences-CARLOS-ALADIM/tree/main/hd${i}.jpg`;
-        option.textContent = `Image ${i}`;
-        imageDropdown.appendChild(option);
-    }
+const totalImages = 20;
+for (let i = 1; i <= totalImages; i++) {
+    const option = document.createElement('option');
+    option.value = `https://raw.githubusercontent.com/90541111262/Persistent-Preferences-CARLOS-ALADIM/main/hd${i}.jpg`;
+    option.textContent = `Image ${i}`;
+    imageDropdown.appendChild(option);
+}
 
     // Load preferences from local storage
     const savedColor = localStorage.getItem('themeColor');
